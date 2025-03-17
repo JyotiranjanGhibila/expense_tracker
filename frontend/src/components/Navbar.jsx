@@ -2,17 +2,14 @@ import {
   Box,
   Flex,
   Avatar,
-  Text,
   Button,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   MenuDivider,
-  useDisclosure,
   useColorModeValue,
   Stack,
-  useColorMode,
   Center,
 } from '@chakra-ui/react'
 import { BadgeDollarSign } from 'lucide-react';

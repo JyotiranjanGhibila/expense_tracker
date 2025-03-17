@@ -36,11 +36,10 @@ const Register = () => {
     setIsLoading(true);
     try {
       const response = await authServices.registering(formData);
-      console.log("registe res::", response);
       // if (!response.ok) {
       //   throw new Error("Registration failed");
       // }
-      if(response?.response?.data?.message == "User already register") {
+      if(response?.response?.data?.message === "User already register") {
         showToast({
           title: "Already registered.",
           description: "Your account has been already register.",

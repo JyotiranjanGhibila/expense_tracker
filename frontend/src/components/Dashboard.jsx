@@ -7,8 +7,6 @@ import {
   Spinner,
   Center,
   Text,
-  Select,
-  Input,
   Flex,
 } from "@chakra-ui/react";
 import ExpenseForm from "../components/ExpenseForm";

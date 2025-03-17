@@ -10,7 +10,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { FaChartPie, FaFingerprint, FaMoneyBillWave } from "react-icons/fa";
-import { Navigate, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const navigate = useNavigate();

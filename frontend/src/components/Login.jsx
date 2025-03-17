@@ -9,9 +9,7 @@ import {
   Heading,
   Text,
   Flex,
-  Center,
 } from "@chakra-ui/react";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import authServices from "../api/authServices";
 
