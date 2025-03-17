@@ -22,6 +22,10 @@ app.use(cookieParser())
 app.use("/api", authRouter)
 app.use("/api", expenseRouter)
 
+app.get("/api", async(req,res) =>{
+    res.send("Hey 😁")
+})
+
 app.listen(PORT , async() => {
     console.log(`Server running on PORT ${PORT}.`);
     try{
