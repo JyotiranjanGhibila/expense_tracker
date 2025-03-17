@@ -10,10 +10,14 @@ require("dotenv").config()
 
 const PORT = process.env.PORT
 const corsOptions = {
-    origin: process.env.CLIENT_URL || true, 
-    methods: ['GET', 'POST', 'PATCH', 'PUT' ,'DELETE'],
+    origin: [
+        "https://expense-tracker-smy8.vercel.app",
+        "http://localhost:3000"
+    ],
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     credentials: true,
-  };
+    allowedHeaders: ["Content-Type", "Authorization"],
+};
   
 app.use(cors(corsOptions));
 app.use(bodyParser.json())
