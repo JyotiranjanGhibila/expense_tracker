@@ -50,6 +50,16 @@ class authServices {
       });
   };
 
+  logOut = () => {
+    return axiosInstance
+      .post(`/auth/logout`)
+      .then((response) => {
+        return response.data;
+      })
+      .catch((err) => {
+        return err;
+      });
+  };
   
 }
 

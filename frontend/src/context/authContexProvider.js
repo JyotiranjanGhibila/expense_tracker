@@ -7,9 +7,17 @@ export const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({ user: null, isAuthenticated: false });
   const [userInfo, setUserInfo] = useState([])
 
-  const getUserInfo =async () => {
+  useEffect(() => {
+
+    if(auth?.user?.userId){
+      getUserInfo(auth?.user?.userId)
+    }
+
+  }, [auth])
+
+  const getUserInfo =async (id) => {
     try{
-      const res = await authServices.getProfile(auth?.userId)
+      const res = await authServices.getProfile(id)
       console.log("prfiL", res);
       if(res?.profile){
         setUserInfo(res?.profile)
@@ -20,7 +28,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   return (
-    <AuthContext.Provider value={{ auth , setAuth}}>
+    <AuthContext.Provider value={{ auth , setAuth, userInfo}}>
       {children}
     </AuthContext.Provider>
   );

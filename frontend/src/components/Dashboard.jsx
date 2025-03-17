@@ -17,6 +17,7 @@ import Chart from "./Chart";
 import SessionEnd from "./SessionEnd";
 import ExpenseTable from "./ExpenseTable";
 import FilterExpense from "./FilterExpense";
+import Nav from "./Navbar";
 
 const COLORS = [
   "#0088FE",
@@ -106,6 +107,8 @@ const Dashboard = () => {
   if (isError) return <SessionEnd />;
 
   return (
+    <>
+    <Nav/>
     <Box mt={1} p={6} boxShadow="md" borderRadius="lg" bg="white">
       <Heading size="lg" textAlign="center">
         Expense Stats
@@ -183,6 +186,8 @@ const Dashboard = () => {
         </Box>
       )}
     </Box>
+    </>
+
   );
 };
 
