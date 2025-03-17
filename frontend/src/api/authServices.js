@@ -1,6 +1,6 @@
 import { axiosInstance } from "./interceptor";
 
-class authServices {
+class AuthServices {
 
   verifyingToken = () => {
     return axiosInstance
@@ -63,4 +63,5 @@ class authServices {
   
 }
 
-export default new authServices();
+const authServices = new AuthServices();
+export default authServices;

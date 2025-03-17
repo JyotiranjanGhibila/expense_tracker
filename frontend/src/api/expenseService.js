@@ -1,6 +1,6 @@
 import { axiosInstance } from "./interceptor";
 
-class ExpenseService {
+class ExpenseServices {
   getExpenses = async ( queryKey ) => {
     const { category, startDate, endDate, page, limit } = queryKey;
     try {
@@ -43,4 +43,5 @@ class ExpenseService {
   
 }
 
-export default new ExpenseService();
+const expenseService = new ExpenseServices();
+export default expenseService;
