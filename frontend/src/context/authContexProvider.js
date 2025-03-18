@@ -18,7 +18,6 @@ export const AuthProvider = ({ children }) => {
   const getUserInfo =async (id) => {
     try{
       const res = await authServices.getProfile(id)
-      console.log("prfiL", res);
       if(res?.profile){
         setUserInfo(res?.profile)
       }

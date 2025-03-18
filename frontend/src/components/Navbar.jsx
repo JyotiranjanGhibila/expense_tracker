@@ -20,14 +20,14 @@ import {useNavigate} from "react-router-dom"
 
 export default function Nav() {
   const navigate = useNavigate()
-  const {userInfo} = useContext(AuthContext)
+  const {userInfo, setAuth} = useContext(AuthContext)
 
   const handleLogout = async() => {
     try{
       const logRes = await authServices.logOut()
-      // console.log("log res:", logRes);
       if(logRes?.success === true) {
         navigate("/login")
+        setAuth({ user: null, isAuthenticated: false })
       }
     }catch(err){
       console.log("log out err:", err.message);
