@@ -12,7 +12,7 @@ const PORT = process.env.PORT
 const corsOptions = {
     origin: [
         "https://expense-tracker-smy8.vercel.app",
-        "http://localhost:3000",
+        "http://localhost:3002",
         "https://expense-tracker-5hjb.vercel.app"
     ],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
@@ -21,8 +21,9 @@ const corsOptions = {
 };
   
 app.use(cors(corsOptions));
-app.use(bodyParser.json())
 app.use(cookieParser())
+app.use(bodyParser.json())
+
 
 app.use("/api", authRouter)
 app.use("/api", expenseRouter)
