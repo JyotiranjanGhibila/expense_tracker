@@ -13,7 +13,7 @@ const corsOptions = {
     origin: [
         "https://expense-tracker-smy8.vercel.app",
         "http://localhost:3000",
-        "https://expense-tracker-5hjb.vercel.app/login"
+        "https://expense-tracker-5hjb.vercel.app"
     ],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     credentials: true,
